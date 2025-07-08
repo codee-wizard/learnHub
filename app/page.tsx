@@ -1,7 +1,14 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import HomePage from "./home";
+import AboutPage from "./about";
 
-export default function Home() {
+
+export default function Page() {
   return (
-    <h1>hajime mashta</h1>
-  )}
+    
+      <>
+        <AboutPage/>
+      </>
+   
+  );
+}
+

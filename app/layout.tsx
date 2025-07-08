@@ -1,6 +1,22 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import {  Merienda, Cormorant_Garamond } from "next/font/google";
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'], 
+  variable: '--font-cormorant',
+
+});
+
+const merienda = Merienda({
+  subsets: ['latin'],
+  variable: '--font-merienda',
+  
+});
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${merienda.variable} ${cormorantGaramond.variable} `}>
         {children}
       </body>
     </html>
