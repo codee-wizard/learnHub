@@ -95,6 +95,29 @@ export default function BlogPage()
       ];
       
     
+  const filteredPosts = blogData.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });  
+    
+  const handleNewsletterSubmit = (e) => {
+    e.preventDefault();
+    toast({
+      title: "Successfully subscribed!",
+      description: "You're now on the list for our latest updates.",
+    });
+  };
+
+  const formatDate = (dateString) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
     return (
     <div className="min-h-screen bg-black text-white">
       
@@ -163,6 +186,66 @@ export default function BlogPage()
 
       {/* featured cards */}
       
+      {filteredPosts.length > 0 && (
+        <section className=" p-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 style={{ fontFamily: 'var(--font-cormorant)' }}  className="text-4xl font-bold mb-8">Featured Article</h2>
+            <div className="rounded-xl border border-[#5e17eb] bg-gradient-to-br from-[#1a1a2e] via-[#0f0f1f] to-[#1a1a2e] p-5 shadow-[0_0_20px_#8a2be2] transition hover:shadow-[0_0_30px_#8a2be2]">
+            <div className="md:flex">
+            <div className="md:w-1/2">
+            <img 
+                    src={filteredPosts[0].image} 
+                    alt={filteredPosts[0].title}
+                    className="w-full h-64 md:h-full object-cover"
+                  />
+            </div>
+            <div className="md:w-1/2 p-8">
+                  <div className="flex items-center space-x-4 mb-4">
+                  <span className="inline-block bg-[#5e17eb] text-black text-xs font-semibold px-2.5 py-1 rounded-full shadow-md hover:shadow-[#5e17eb] transition">
+  {filteredPosts[0].category}
+</span>
+<span className="text-sm text-gray-400">{filteredPosts[0].readTime}</span>
+</div>
+        <h3 style={{ fontFamily: 'var(--font-cormorant)' }} className="text-2xl md:text-3xl font-bold mb-4 text-white hover:text-blue-600 transition-colors cursor-pointer">
+                    {filteredPosts[0].title}
+                  </h3>
+        <p className="text-gray-300 mb-6 leading-relaxed">
+                    {filteredPosts[0].excerpt}</p>
 
+
+        <div className="flex items-center justify-between">
+        <div className="flex items-center space-x-4 text-sm text-gray-400">
+        <div className="flex items-center">
+        <User className="h-4 w-4 mr-1" />
+        {filteredPosts[0].author}
+        </div>
+        <div className="flex items-center">
+                        <Calendar className="h-4 w-4 mr-1" />
+                        {formatDate(filteredPosts[0].date)}
+            </div>
+        </div>
+        <button className="inline-flex items-center bg-[#5e17eb] hover:bg-[#5e17eb] text-white font-semibold px-4 py-2 rounded-md transition duration-200 shadow-md hover:shadow-[#5e17eb]">
+  Read More
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="ml-2 h-4 w-4"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+  </svg>
+</button>
+
+
+        </div>
+                  </div>
+            </div>
+            </div>
+
+            </div>
+        </section>
+      )}
 
       </div>)}
