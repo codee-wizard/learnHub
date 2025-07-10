@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Search, Calendar, User, ArrowRight, Mail } from 'lucide-react';
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function BlogPage() 
 {
@@ -326,5 +327,5 @@ export default function BlogPage()
 </form>
 </div></div></section>
 
-
+<Footer/>
 </div>)}

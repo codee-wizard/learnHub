@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Navbar from '../components/Navbar';
 import { motion } from "framer-motion";
+import Footer from "../components/Footer"
 
 const testimonials = [
   {
@@ -228,6 +229,8 @@ export default function HomePage() {
     </div>
   </div>
 </section>
+
+<Footer/>
   </div>
 );
 }
