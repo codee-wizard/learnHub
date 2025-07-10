@@ -33,10 +33,11 @@ export default function Login() {
       <div className="max-w-md mx-auto">
         <div className="text-center mb-8">
           <div className="flex justify-center items-center space-x-2">
-            <GraduationCap className="h-10 w-10 text-cyan-400" />
-            <span className="text-2xl font-bold text-violet-400">LearnHub</span>
+            <GraduationCap className="h-10 w-10 text-violet-500" />
+            <span className="text-2xl font-bold text-cyan-400">LearnHub</span>
           </div>
-          <h1 className="text-3xl font-bold mt-4 text-cyan-300">Welcome Back</h1>
+          <h1 style={{ fontFamily: 'var(--font-cormorant)' }} className="text-3xl font-bold mt-4 text-white-300">Welcome Back</h1>
+          <br></br>
           <p className="text-gray-400">Sign in to continue your learning journey</p>
         </div>
 

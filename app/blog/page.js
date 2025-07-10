@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Search, Calendar, User, ArrowRight, Mail } from 'lucide-react';
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 
 export default function BlogPage() 
 {
