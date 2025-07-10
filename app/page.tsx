@@ -1,12 +1,11 @@
-import HomePage from "./home";
-import AboutPage from "./about";
-import BLogPage from "./blog";
+
+import Navbar from "./components/navbar";
 
 export default function Page() {
   return (
     
       <>
-      <BLogPage/>
+      <Navbar/>
 
       </>
    

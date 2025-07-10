@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Navbar from '../components/navbar';
 
 const testimonials = [
   {
@@ -41,7 +42,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen text-white">
-
+        <Navbar/>
       {/* first-sec */}
     <section
       className="relative bg-cover bg-center bg-no-repeat h-[800px] text-white flex items-center justify-center px-4"

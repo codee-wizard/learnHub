@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Search, Calendar, User, ArrowRight, Mail } from 'lucide-react';
+import Navbar from "../components/navbar";
 
 export default function BlogPage() 
 {
@@ -119,8 +120,9 @@ export default function BlogPage()
     });
   };
     return (
+    
     <div className="min-h-screen bg-black text-white">
-      
+      <Navbar/>
       
       {/* top-most */}
       <section className="relative py-20 bg-gradient-to-r from-gray-900 to-black">

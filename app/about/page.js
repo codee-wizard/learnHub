@@ -64,6 +64,8 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-black text-white">
+
+    
       {/* first-sec */}
       <section className="relative h-[45vh] flex items-center justify-center text-center text-white overflow-hidden">
         <div
