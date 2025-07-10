@@ -61,15 +61,14 @@ const Signup = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white py-12 px-4">
-
-
-      <div className="flex items-center justify-center py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white pb-15">
+            <Navbar/>
+      <div className="flex items-center justify-center pt-6 px-4">
         <div className="w-full max-w-md">
           <div className="text-center mb-8">
             <div className="flex items-center justify-center space-x-2 mb-4">
-              <GraduationCap className="h-10 w-10 text-violet-500" />
-              <span className="text-2xl font-extrabold tracking-wide text-cyan-400">LearnHub</span>
+              <GraduationCap className="h-20 w-20 text-violet-500" />
+              <span className="text-5xl font-bold tracking-wide text-cyan-400">LearnHub</span>
             </div>
             <h1 style={{ fontFamily: 'var(--font-cormorant)' }} className="text-3xl font-bold mb-2 text-white">Join LearnHub</h1>
             <p className="text-gray-400">Create your account and unlock futuristic learning</p>
@@ -95,7 +94,7 @@ const Signup = () => {
                       placeholder={`Enter your ${label.toLowerCase()}`}
                       value={formData[id]}
                       onChange={handleChange}
-                      className="w-full pl-10 pr-4 py-2 bg-gray-800 border border-cyan-700 rounded text-white placeholder-gray-500 focus:ring-2 focus:ring-violet-500"
+                      className="w-full pl-10 pr-4 py-2 bg-gray-800 border border-violet-700 rounded text-white placeholder-gray-500 focus:ring-2 focus:ring-violet-500"
                       required
                     />
                   </div>
@@ -109,7 +108,7 @@ const Signup = () => {
                 <div key={id} className="space-y-2">
                   <label htmlFor={id} className="text-sm font-medium text-white-300">{label}</label>
                   <div className="relative">
-                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-cyan-400 h-5 w-5" />
+                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
                     <input
                       id={id}
                       name={id}
@@ -117,15 +116,15 @@ const Signup = () => {
                       placeholder={label}
                       value={formData[id]}
                       onChange={handleChange}
-                      className="w-full pl-10 pr-10 py-2 bg-gray-800 border border-cyan-700 rounded text-white placeholder-violet-400 focus:ring-2 focus:ring-violet-500"
+                      className="w-full pl-10 pr-10 py-2 bg-gray-800 border border-violet-700 rounded text-white placeholder-gray-400 focus:ring-2 focus:ring-violet-500"
                       required
                     />
                     <button
                       type="button"
                       onClick={() => toggle(!visible)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-cyan-400 hover:text-violet-400"
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-cyan-400"
                     >
-                      {visible ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+                      {visible ? <Eye className="h-5 w-5" /> : <EyeOff className="h-5 w-5" />}
                     </button>
                   </div>
                 </div>
@@ -135,7 +134,7 @@ const Signup = () => {
                 <input
                   type="checkbox"
                   id="terms"
-                  className="rounded border-cyan-600 bg-gray-800 text-cyan-400 focus:ring-cyan-400"
+                  className="rounded border-violet-600 bg-gray-800 text-cyan-400 focus:ring-cyan-400"
                   required
                 />
                 <label htmlFor="terms" className="text-sm text-cyan-300">
@@ -153,14 +152,14 @@ const Signup = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 text-black font-semibold py-3 rounded shadow-md shadow-cyan-400/30 hover:brightness-110 transition-all duration-300"
+                className="w-full bg-gradient-to-r from-cyan-400 via-violet-500 to-blue-500 text-black font-semibold py-3 rounded shadow-md shadow-cyan-400/30 hover:brightness-110 transition-all duration-300"
               >
                 {isLoading ? 'Creating Account...' : 'Create Account'}
               </button>
             </form>
 
             <div className="mt-6 text-center">
-              <p className="text-cyan-400">
+              <p className="text-gray-400">
                 Already have an account?{' '}
                 <Link href="/login" className="text-violet-300 hover:text-violet-200 underline font-medium">
                   Sign in
