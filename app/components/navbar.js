@@ -18,7 +18,7 @@ export default function Navbar() {
   <GraduationCap className="h-12 w-12 text-violet-500" />
   <span className="text-xl font-bold">LearnHub</span>
 </a>
-
+{/* pages */}
 <div className="hidden md:flex items-center space-x-8">
       <Link
         href="/home"
@@ -63,7 +63,28 @@ export default function Navbar() {
     </div>
 
 
-        
+    <div className="flex items-center space-x-4 md:space-x-6">
+  <Link
+    href="/signup"
+    className="text-white font-medium hover:text-violet-500"
+  >
+    Login
+  </Link>
+  <Link
+    href="/login"
+    className="bg-violet-600 text-white px-4 py-2 rounded-md hover:bg-violet-800"
+  >
+    Sign up
+  </Link>
+
+  <div className="md:hidden">
+    <button>
+      <Menu size={28} className="text-white" />
+    </button>
+  </div>
+</div>
+
+
             </div>
             </div>
         </nav>

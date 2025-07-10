@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Navbar from '../components/navbar';
+import Navbar from '../components/Navbar';
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -154,6 +155,7 @@ export default function HomePage() {
               </ul>
             </div>
             <div>
+              
               <img 
                 src="https://i.pinimg.com/736x/79/a7/67/79a7673de7bb36559242669ad6da7bac.jpg" 
                 alt="Interactive Learning"

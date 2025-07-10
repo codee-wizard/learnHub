@@ -2,6 +2,7 @@
 
 import { Heart, Star, Eye, Target, Users , Award} from "lucide-react";
 import React from 'react';
+import Navbar from "../components/navbar";
 
 export default function AboutPage() {
 
@@ -64,7 +65,7 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-
+<Navbar/>
     
       {/* first-sec */}
       <section className="relative h-[45vh] flex items-center justify-center text-center text-white overflow-hidden">
