@@ -1,0 +1,1229 @@
+{
+    "HTML": {
+      "Beginner": [
+        {
+          "id": "html-beg-1",
+          "title": "What is HTML?",
+          "videoUrl": "https://www.youtube.com/embed/qz0aGYrrlhU",
+          "quiz": [
+            {
+              "question": "What does HTML stand for?",
+              "options": [
+                "Hyper Text Markup Language",
+                "Home Tool Markup Language",
+                "Hyperlinks and Text Markup Language",
+                "Hyper Tool Management Language"
+              ],
+              "answer": "Hyper Text Markup Language",
+              "explanation": "HTML stands for Hyper Text Markup Language."
+            },
+            {
+              "question": "What is the purpose of HTML?",
+              "options": [
+                "To style web pages",
+                "To add interactivity to web pages",
+                "To structure the content on the web",
+                "To store data on a server"
+              ],
+              "answer": "To structure the content on the web",
+              "explanation": "HTML is used to structure the content of web pages."
+            },
+            {
+              "question": "Which HTML tag is used to define the main heading of a page?",
+              "options": [
+                "<h6>",
+                "<head>",
+                "<title>",
+                "<h1>"
+              ],
+              "answer": "<h1>",
+              "explanation": "<h1> is used to define the main heading and is the highest level of heading in HTML."
+            },
+            {
+              "question": "Which of the following tags is used to create a hyperlink in HTML?",
+              "options": [
+                "<link>",
+                "<a>",
+                "<href>",
+                "<url>"
+              ],
+              "answer": "<a>",
+              "explanation": "The <a> tag is used to create hyperlinks in HTML."
+            },
+            {
+              "question": "What does the <br> tag do in HTML?",
+              "options": [
+                "Creates a bold text",
+                "Inserts a horizontal line",
+                "Breaks the page into sections",
+                "Inserts a line break"
+              ],
+              "answer": "Inserts a line break",
+              "explanation": "The <br> tag inserts a line break in the text."
+            }
+          ]
+        }
+      ],
+      "Level1": [
+        {
+          "id": "html-beg-2",
+          "title": "Basic HTML Tags",
+          "videoUrl": "https://www.youtube.com/embed/UB1O30fR-EE",
+          "quiz": [
+            {
+              "question": "Which HTML tag is used to insert an image?",
+              "options": [
+                "<img>",
+                "<image>",
+                "<pic>",
+                "<src>"
+              ],
+              "answer": "<img>",
+              "explanation": "The <img> tag is used to embed images in HTML."
+            },
+            {
+              "question": "What attribute is used to provide the image path in an <img> tag?",
+              "options": [
+                "href",
+                "src",
+                "alt",
+                "path"
+              ],
+              "answer": "src",
+              "explanation": "The 'src' attribute specifies the path to the image file."
+            },
+            {
+              "question": "Which tag is used to create a list with bullet points?",
+              "options": [
+                "<ol>",
+                "<li>",
+                "<ul>",
+                "<list>"
+              ],
+              "answer": "<ul>",
+              "explanation": "The <ul> tag creates an unordered list with bullet points."
+            },
+            {
+              "question": "Which tag is used to add a row in a table?",
+              "options": [
+                "<tr>",
+                "<td>",
+                "<row>",
+                "<th>"
+              ],
+              "answer": "<tr>",
+              "explanation": "<tr> defines a row in an HTML table."
+            },
+            {
+              "question": "What does the <p> tag define?",
+              "options": [
+                "Page title",
+                "Paragraph",
+                "Picture",
+                "Panel"
+              ],
+              "answer": "Paragraph",
+              "explanation": "The <p> tag is used to define paragraphs in HTML."
+            }
+          ]
+        },
+        {
+          "id": "html-beg-3",
+          "title": "HTML Attributes",
+          "videoUrl": "https://www.youtube.com/embed/wvR40su_XBM",
+          "quiz": [
+            {
+              "question": "What are HTML attributes used for?",
+              "options": [
+                "To add JavaScript to a page",
+                "To define content layout",
+                "To provide additional information about elements",
+                "To style elements"
+              ],
+              "answer": "To provide additional information about elements",
+              "explanation": "HTML attributes provide extra information about elements, like class, id, href, etc."
+            },
+            {
+              "question": "Which attribute is used to specify a unique identifier for an element?",
+              "options": [
+                "class",
+                "name",
+                "id",
+                "ref"
+              ],
+              "answer": "id",
+              "explanation": "The 'id' attribute assigns a unique identifier to an element."
+            },
+            {
+              "question": "Which attribute specifies a CSS class for an element?",
+              "options": [
+                "class",
+                "style",
+                "id",
+                "css"
+              ],
+              "answer": "class",
+              "explanation": "The 'class' attribute assigns one or more class names to an element for styling."
+            },
+            {
+              "question": "Which attribute is used with <a> to specify the destination URL?",
+              "options": [
+                "src",
+                "href",
+                "link",
+                "target"
+              ],
+              "answer": "href",
+              "explanation": "The 'href' attribute specifies the URL the link goes to."
+            },
+            {
+              "question": "What does the 'alt' attribute provide in an <img> tag?",
+              "options": [
+                "Image source path",
+                "Alternative text for the image",
+                "Title of the image",
+                "Image size"
+              ],
+              "answer": "Alternative text for the image",
+              "explanation": "The 'alt' attribute provides alternative text if the image cannot be displayed."
+            }
+          ]
+        }
+      ],
+      "Level2": [{
+        "id": "html-adv-2",
+        "title": "HTML Forms",
+        "videoUrl": "https://www.youtube.com/embed/fqF9M92jzUo",
+        "quiz": [
+          {
+            "question": "Which tag is used to create a form in HTML?",
+            "options": [
+              "<input>",
+              "<form>",
+              "<label>",
+              "<field>"
+            ],
+            "answer": "<form>",
+            "explanation": "<form> is the main container for collecting user input."
+          },
+          {
+            "question": "Which attribute is used to specify where to send form data?",
+            "options": [
+              "method",
+              "target",
+              "action",
+              "href"
+            ],
+            "answer": "action",
+            "explanation": "The 'action' attribute defines the URL where form data is sent on submission."
+          },
+          {
+            "question": "What is the purpose of the 'name' attribute in input elements?",
+            "options": [
+              "To assign an ID",
+              "To specify a label",
+              "To identify the data when submitted",
+              "To add placeholder text"
+            ],
+            "answer": "To identify the data when submitted",
+            "explanation": "The 'name' attribute identifies form data sent to the server."
+          },
+          {
+            "question": "Which input type is used for passwords?",
+            "options": [
+              "text",
+              "email",
+              "password",
+              "hidden"
+            ],
+            "answer": "password",
+            "explanation": "The 'password' input type hides the entered text."
+          },
+          {
+            "question": "What does the <label> tag do in forms?",
+            "options": [
+              "Styles the input field",
+              "Links text to an input field",
+              "Sends data to the server",
+              "Defines layout"
+            ],
+            "answer": "Links text to an input field",
+            "explanation": "<label> provides a clickable description for input fields, improving usability."
+          }
+        ]
+      },
+      {
+        "id": "html-adv-3",
+        "title": "HTML Tables",
+        "videoUrl": "https://www.youtube.com/embed/BI1o2H9z9fo",
+        "quiz": [
+          {
+            "question": "Which tag is used to define a table?",
+            "options": [
+              "<tr>",
+              "<td>",
+              "<table>",
+              "<thead>"
+            ],
+            "answer": "<table>",
+            "explanation": "The <table> tag creates a table in HTML."
+          },
+          {
+            "question": "Which tag defines a table header?",
+            "options": [
+              "<td>",
+              "<tr>",
+              "<th>",
+              "<thead>"
+            ],
+            "answer": "<th>",
+            "explanation": "<th> is used to define header cells in a table."
+          },
+          {
+            "question": "What tag is used to group the table’s column headings?",
+            "options": [
+              "<thead>",
+              "<tbody>",
+              "<tfoot>",
+              "<group>"
+            ],
+            "answer": "<thead>",
+            "explanation": "<thead> groups header rows in a table for better structure."
+          },
+          {
+            "question": "Which tag defines the main body of the table?",
+            "options": [
+              "<tbody>",
+              "<tfoot>",
+              "<thead>",
+              "<tr>"
+            ],
+            "answer": "<tbody>",
+            "explanation": "<tbody> contains the main rows of data in a table."
+          },
+          {
+            "question": "Which tag defines each cell in a table row?",
+            "options": [
+              "<tr>",
+              "<td>",
+              "<th>",
+              "<cell>"
+            ],
+            "answer": "<td>",
+            "explanation": "<td> defines a standard cell in a table row."
+          }
+        ]
+      }]
+    },
+
+    "CSS": {
+    "Beginner": [{
+        "id": "css-beg-1",
+        "title": "Introduction to CSS",
+        "videoUrl": "https://www.youtube.com/embed/yfoY53QXEnI",
+        "quiz": [
+          {
+            "question": "What does CSS stand for?",
+            "options": [
+              "Creative Style Sheets",
+              "Colorful Style Sheets",
+              "Cascading Style Sheets",
+              "Computer Style Sheets"
+            ],
+            "answer": "Cascading Style Sheets",
+            "explanation": "CSS stands for Cascading Style Sheets, used to style HTML content."
+          },
+          {
+            "question": "What is the purpose of CSS?",
+            "options": [
+              "To create HTML structure",
+              "To store data",
+              "To style and layout web pages",
+              "To handle user input"
+            ],
+            "answer": "To style and layout web pages",
+            "explanation": "CSS is used to control the appearance and layout of web pages."
+          },
+          {
+            "question": "Which HTML tag is used to link an external CSS file?",
+            "options": [
+              "<css>",
+              "<style>",
+              "<link>",
+              "<script>"
+            ],
+            "answer": "<link>",
+            "explanation": "The <link> tag links an external CSS file to HTML."
+          },
+          {
+            "question": "Where is the <style> tag placed in an HTML document?",
+            "options": [
+              "Inside the <body>",
+              "Before the <!DOCTYPE>",
+              "In the <head>",
+              "After the <footer>"
+            ],
+            "answer": "In the <head>",
+            "explanation": "The <style> tag is placed inside the <head> section for internal CSS."
+          },
+          {
+            "question": "How do you apply CSS directly to an element?",
+            "options": [
+              "Using a class",
+              "Using the style attribute",
+              "With a script",
+              "Using a link"
+            ],
+            "answer": "Using the style attribute",
+            "explanation": "Inline CSS is applied using the 'style' attribute directly in the HTML tag."
+          }
+        ]
+      }
+    ],
+    "Level1": [
+      {
+        "id": "css-lv1-1",
+        "title": "Selectors and Colors",
+        "videoUrl": "https://www.youtube.com/embed/1PnVor36_40",
+        "quiz": [
+          {
+            "question": "Which symbol is used for class selectors in CSS?",
+            "options": [
+              "#",
+              ".",
+              "$",
+              "@"
+            ],
+            "answer": ".",
+            "explanation": "The dot (.) is used for class selectors in CSS."
+          },
+          {
+            "question": "How do you select an element with ID 'main' in CSS?",
+            "options": [
+              ".main",
+              "#main",
+              "main",
+              "@main"
+            ],
+            "answer": "#main",
+            "explanation": "#main selects an element with the ID 'main'."
+          },
+          {
+            "question": "Which of these is a valid CSS color value?",
+            "options": [
+              "red",
+              "#ff0000",
+              "rgb(255,0,0)",
+              "All of the above"
+            ],
+            "answer": "All of the above",
+            "explanation": "Colors in CSS can be defined using names, hex, or rgb values."
+          },
+          {
+            "question": "Which selector targets all <p> elements inside a <div>?",
+            "options": [
+              "div > p",
+              "div + p",
+              "p div",
+              "div p"
+            ],
+            "answer": "div p",
+            "explanation": "'div p' selects all <p> elements that are descendants of a <div>."
+          },
+          {
+            "question": "How do you apply a background color to the entire page?",
+            "options": [
+              "body { color: red; }",
+              "page { background-color: red; }",
+              "body { background-color: red; }",
+              "html { color: red; }"
+            ],
+            "answer": "body { background-color: red; }",
+            "explanation": "To change the page background, set 'background-color' on the <body>."
+          }
+        ]
+      },
+      {
+        "id": "css-lv1-2",
+        "title": "Box Model & Text Styling",
+        "videoUrl": "https://www.youtube.com/embed/rIO5326FgPE",
+        "quiz": [
+          {
+            "question": "Which CSS property adds space inside an element's border?",
+            "options": [
+              "margin",
+              "padding",
+              "spacing",
+              "gap"
+            ],
+            "answer": "padding",
+            "explanation": "Padding is the space between content and the element’s border."
+          },
+          {
+            "question": "Which property is used to add space outside the border?",
+            "options": [
+              "padding",
+              "gap",
+              "margin",
+              "spacing"
+            ],
+            "answer": "margin",
+            "explanation": "Margin adds space outside the border of an element."
+          },
+          {
+            "question": "What does the 'border' property do?",
+            "options": [
+              "Adds spacing",
+              "Changes background",
+              "Creates a border around the element",
+              "Resizes the element"
+            ],
+            "answer": "Creates a border around the element",
+            "explanation": "The 'border' property adds a border around the element."
+          },
+          {
+            "question": "Which CSS property changes the size of text?",
+            "options": [
+              "text-size",
+              "font-weight",
+              "font-size",
+              "text-style"
+            ],
+            "answer": "font-size",
+            "explanation": "'font-size' is used to set the size of text in CSS."
+          },
+          {
+            "question": "Which property makes text bold?",
+            "options": [
+              "font-bold",
+              "weight",
+              "bold",
+              "font-weight"
+            ],
+            "answer": "font-weight",
+            "explanation": "The 'font-weight' property controls the boldness of text."
+          }
+        ]
+      }
+    ],
+
+    "Level2": [
+      {
+        "id": "css-lv2-1",
+        "title": "Flexbox & Grid Layout",
+        "videoUrl": "https://www.youtube.com/embed/fYq5PXgSsbE",
+        "quiz": [
+          {
+            "question": "Which property makes a container a flex container?",
+            "options": [
+              "display: flex;",
+              "flex: container;",
+              "position: flex;",
+              "layout: flexbox;"
+            ],
+            "answer": "display: flex;",
+            "explanation": "'display: flex;' turns an element into a flex container."
+          },
+          {
+            "question": "What property is used to align items along the main axis in flexbox?",
+            "options": [
+              "align-items",
+              "justify-content",
+              "flex-align",
+              "text-align"
+            ],
+            "answer": "justify-content",
+            "explanation": "'justify-content' controls alignment along the main axis."
+          },
+          {
+            "question": "What does 'align-items: center;' do?",
+            "options": [
+              "Aligns items to the start",
+              "Aligns items to the bottom",
+              "Vertically centers items",
+              "Horizontally centers items"
+            ],
+            "answer": "Vertically centers items",
+            "explanation": "'align-items: center;' vertically centers items inside the flex container."
+          },
+          {
+            "question": "What CSS property enables grid layout?",
+            "options": [
+              "display: block;",
+              "display: grid;",
+              "position: grid;",
+              "layout: grid;"
+            ],
+            "answer": "display: grid;",
+            "explanation": "'display: grid;' turns the container into a grid layout."
+          },
+          {
+            "question": "Which property sets the number and size of columns in CSS Grid?",
+            "options": [
+              "grid-rows",
+              "columns",
+              "grid-template-columns",
+              "template-cols"
+            ],
+            "answer": "grid-template-columns",
+            "explanation": "'grid-template-columns' defines column structure in grid."
+          }
+        ]
+      },
+      {
+        "id": "css-lv2-2",
+        "title": "Transitions & Responsive Design",
+        "videoUrl": "https://www.youtube.com/embed/GUEB9FogoP8",
+        "quiz": [
+          {
+            "question": "Which property is used to create smooth animations?",
+            "options": [
+              "transition",
+              "animation",
+              "effect",
+              "motion"
+            ],
+            "answer": "transition",
+            "explanation": "'transition' allows property changes to occur smoothly over a duration."
+          },
+          {
+            "question": "Which unit is relative to the root font size?",
+            "options": [
+              "px",
+              "em",
+              "rem",
+              "%"
+            ],
+            "answer": "rem",
+            "explanation": "'rem' is relative to the root element's font size."
+          },
+          {
+            "question": "What is the purpose of media queries?",
+            "options": [
+              "To style print pages",
+              "To link different CSS files",
+              "To apply styles based on screen size",
+              "To debug CSS code"
+            ],
+            "answer": "To apply styles based on screen size",
+            "explanation": "Media queries make your design responsive to different devices."
+          },
+          {
+            "question": "Which keyword starts a media query?",
+            "options": [
+              "@media",
+              "@responsive",
+              "@screen",
+              "@query"
+            ],
+            "answer": "@media",
+            "explanation": "Media queries begin with '@media'."
+          },
+          {
+            "question": "Which property changes layout direction in flexbox?",
+            "options": [
+              "flex-align",
+              "flex-direction",
+              "direction",
+              "justify-items"
+            ],
+            "answer": "flex-direction",
+            "explanation": "'flex-direction' defines the direction of the main axis in flexbox."
+          }
+        ]
+      }
+    ]
+    },
+    "Scratch": {
+  "Beginner": [
+    {
+      "id": "scratch-beg-1",
+      "title": "Introduction to Scratch",
+      "videoUrl": "https://www.youtube.com/embed/VIpmkeqJhmQ",
+      "quiz": [
+        {
+          "question": "What is Scratch?",
+          "options": [
+            "A programming language for professionals",
+            "A tool for editing videos",
+            "A block-based visual programming language for beginners",
+            "A mobile app for creating websites"
+          ],
+          "answer": "A block-based visual programming language for beginners",
+          "explanation": "Scratch is designed to teach programming through visual blocks, especially for beginners."
+        },
+        {
+          "question": "Who primarily uses Scratch?",
+          "options": [
+            "Doctors",
+            "Young students and beginners",
+            "Architects",
+            "Professional software engineers"
+          ],
+          "answer": "Young students and beginners",
+          "explanation": "Scratch is mainly targeted at kids and beginners learning to code."
+        },
+        {
+          "question": "What are Scratch blocks?",
+          "options": [
+            "Pieces of code you write by hand",
+            "Tools to draw shapes",
+            "Colored blocks that represent code instructions",
+            "Apps inside Scratch"
+          ],
+          "answer": "Colored blocks that represent code instructions",
+          "explanation": "Scratch uses colored blocks to represent programming logic visually."
+        },
+        {
+          "question": "Where do you build your projects in Scratch?",
+          "options": [
+            "The CodePad",
+            "The Terminal",
+            "The Stage and Scripting Area",
+            "The Whiteboard"
+          ],
+          "answer": "The Stage and Scripting Area",
+          "explanation": "You build and view Scratch projects in the Stage and Scripting Area."
+        },
+        {
+          "question": "What is a Sprite in Scratch?",
+          "options": [
+            "A drink",
+            "A sound effect",
+            "A character or object in a Scratch project",
+            "A bug in code"
+          ],
+          "answer": "A character or object in a Scratch project",
+          "explanation": "Sprites are characters, images, or objects you control in Scratch."
+        }
+      ]
+    }
+  ],
+  "Level1": [
+    {
+      "id": "scratch-lv1-1",
+      "title": "Motion and Events",
+      "videoUrl": "https://www.youtube.com/embed/Xn2zVg20NLI",
+      "quiz": [
+        {
+          "question": "Which block makes a sprite move?",
+          "options": [
+            "Say Hello",
+            "Move 10 steps",
+            "Repeat block",
+            "Forever block"
+          ],
+          "answer": "Move 10 steps",
+          "explanation": "The 'move 10 steps' block moves the sprite forward."
+        },
+        {
+          "question": "What color are motion blocks in Scratch?",
+          "options": [
+            "Blue",
+            "Yellow",
+            "Green",
+            "Purple"
+          ],
+          "answer": "Blue",
+          "explanation": "Motion blocks are colored blue in Scratch."
+        },
+        {
+          "question": "Which block starts the program when the green flag is clicked?",
+          "options": [
+            "When space key pressed",
+            "When I receive message",
+            "When green flag clicked",
+            "Start block"
+          ],
+          "answer": "When green flag clicked",
+          "explanation": "This block triggers scripts when the green flag is clicked."
+        },
+        {
+          "question": "Which block repeats actions multiple times?",
+          "options": [
+            "Forever block",
+            "Move block",
+            "Say block",
+            "Wait block"
+          ],
+          "answer": "Forever block",
+          "explanation": "The 'forever' block repeats the code inside it endlessly."
+        },
+        {
+          "question": "What happens if you use the 'go to x: y:' block?",
+          "options": [
+            "The sprite disappears",
+            "The sprite says hello",
+            "The sprite moves to specific coordinates",
+            "The program stops"
+          ],
+          "answer": "The sprite moves to specific coordinates",
+          "explanation": "'go to x: y:' places the sprite at the given position."
+        }
+      ]
+    }
+  ],
+  "Level2": [
+    {
+      "id": "scratch-lv2-1",
+      "title": "Control, Loops & Broadcasts",
+      "videoUrl": "https://www.youtube.com/embed/h7mGdc9GDLY",
+      "quiz": [
+        {
+          "question": "What is the purpose of the 'repeat' block?",
+          "options": [
+            "To create sound",
+            "To repeat an action a fixed number of times",
+            "To move a sprite randomly",
+            "To change background"
+          ],
+          "answer": "To repeat an action a fixed number of times",
+          "explanation": "The 'repeat' block is used to execute a set of instructions repeatedly."
+        },
+        {
+          "question": "What does the 'broadcast' block do?",
+          "options": [
+            "Sends a message to other sprites",
+            "Plays music",
+            "Displays a message on the screen",
+            "Turns the sprite"
+          ],
+          "answer": "Sends a message to other sprites",
+          "explanation": "Broadcasting sends a message to trigger actions in other sprites."
+        },
+        {
+          "question": "Which control block waits for a number of seconds?",
+          "options": [
+            "Forever",
+            "Repeat",
+            "Wait",
+            "Broadcast"
+          ],
+          "answer": "Wait",
+          "explanation": "The 'wait' block pauses execution for a given time."
+        },
+        {
+          "question": "Which block allows you to make decisions?",
+          "options": [
+            "Say block",
+            "Go to block",
+            "If block",
+            "Play sound block"
+          ],
+          "answer": "If block",
+          "explanation": "The 'if' block runs code only if a condition is true."
+        },
+        {
+          "question": "Which control structure allows forever looping?",
+          "options": [
+            "Wait",
+            "Repeat",
+            "If",
+            "Forever"
+          ],
+          "answer": "Forever",
+          "explanation": "The 'forever' block runs the code inside it endlessly."
+        }
+      ]
+    }
+  ]
+},
+
+"Python": {
+  "Beginner": [
+    {
+      "id": "python-beg-1",
+      "title": "Introduction to Python",
+      "videoUrl": "https://www.youtube.com/embed/_uQrJ0TkZlc",
+      "quiz": [
+        {
+          "question": "What is Python?",
+          "options": [
+            "A snake species",
+            "A low-level language",
+            "A high-level programming language",
+            "A markup language"
+          ],
+          "answer": "A high-level programming language",
+          "explanation": "Python is a high-level, interpreted programming language used for various applications."
+        },
+        {
+          "question": "Who created Python?",
+          "options": [
+            "Elon Musk",
+            "Dennis Ritchie",
+            "Guido van Rossum",
+            "James Gosling"
+          ],
+          "answer": "Guido van Rossum",
+          "explanation": "Python was created by Guido van Rossum and released in 1991."
+        },
+        {
+          "question": "What file extension is used for Python files?",
+          "options": [
+            ".py",
+            ".python",
+            ".pt",
+            ".p"
+          ],
+          "answer": ".py",
+          "explanation": "Python files use the .py extension."
+        },
+        {
+          "question": "Which function is used to display output in Python?",
+          "options": [
+            "display()",
+            "echo()",
+            "write()",
+            "print()"
+          ],
+          "answer": "print()",
+          "explanation": "The print() function is used to show output in Python."
+        },
+        {
+          "question": "How do you write a comment in Python?",
+          "options": [
+            "// comment",
+            "/* comment */",
+            "# comment",
+            "<!-- comment -->"
+          ],
+          "answer": "# comment",
+          "explanation": "Python uses the # symbol to indicate single-line comments."
+        }
+      ]
+    }
+  ],
+  "Level1": [
+    {
+      "id": "python-lv1-1",
+      "title": "Variables and Data Types",
+      "videoUrl": "https://www.youtube.com/embed/CqvZ3vGoGs0",
+      "quiz": [
+        {
+          "question": "Which of these is a valid variable name in Python?",
+          "options": [
+            "1number",
+            "number_1",
+            "number-1",
+            "number 1"
+          ],
+          "answer": "number_1",
+          "explanation": "Variable names can't start with numbers or contain spaces/dashes. 'number_1' is valid."
+        },
+        {
+          "question": "What is the data type of 3.14 in Python?",
+          "options": [
+            "Integer",
+            "String",
+            "Float",
+            "Boolean"
+          ],
+          "answer": "Float",
+          "explanation": "3.14 is a floating-point number (decimal), hence a float."
+        },
+        {
+          "question": "Which data type would you use to store True or False?",
+          "options": [
+            "str",
+            "int",
+            "bool",
+            "float"
+          ],
+          "answer": "bool",
+          "explanation": "The 'bool' data type stores True or False values."
+        },
+        {
+          "question": "What keyword is used to assign a value to a variable?",
+          "options": [
+            ":",
+            "=",
+            "==",
+            "->"
+          ],
+          "answer": "=",
+          "explanation": "The assignment operator '=' is used to assign values to variables."
+        },
+        {
+          "question": "Which function returns the data type of a variable?",
+          "options": [
+            "typeof()",
+            "datatype()",
+            "gettype()",
+            "type()"
+          ],
+          "answer": "type()",
+          "explanation": "The type() function returns the data type of an object."
+        }
+      ]
+    }
+  ],
+  "Level2": [
+    {
+      "id": "python-lv2-1",
+      "title": "Conditional Statements and Loops",
+      "videoUrl": "https://www.youtube.com/embed/KzqSDvzOFNA",
+      "quiz": [
+        {
+          "question": "Which keyword is used for conditional branching?",
+          "options": [
+            "if",
+            "while",
+            "def",
+            "loop"
+          ],
+          "answer": "if",
+          "explanation": "The 'if' statement is used to create conditional branches."
+        },
+        {
+          "question": "What is the correct syntax for a while loop?",
+          "options": [
+            "while (x < 5):",
+            "while x < 5",
+            "loop while x < 5:",
+            "while x < 5 {}"
+          ],
+          "answer": "while (x < 5):",
+          "explanation": "The correct Python syntax uses a colon after the condition."
+        },
+        {
+          "question": "What does the 'break' statement do?",
+          "options": [
+            "Skips to next iteration",
+            "Stops the loop completely",
+            "Pauses execution",
+            "Prints a line break"
+          ],
+          "answer": "Stops the loop completely",
+          "explanation": "The 'break' statement exits the loop immediately."
+        },
+        {
+          "question": "What is the output of: `print(10 > 5)`?",
+          "options": [
+            "5",
+            "True",
+            "10",
+            "None"
+          ],
+          "answer": "True",
+          "explanation": "The comparison 10 > 5 returns True."
+        },
+        {
+          "question": "Which loop is used when you know how many times to iterate?",
+          "options": [
+            "while",
+            "for",
+            "if",
+            "loop"
+          ],
+          "answer": "for",
+          "explanation": "The 'for' loop is best for known iterations, like looping through a range or list."
+        }
+      ]
+    }
+  ]
+},
+
+"JavaScript": {
+  "Beginner": [
+    {
+      "id": "js-beg-1",
+      "title": "Introduction to JavaScript",
+      "videoUrl": "https://www.youtube.com/embed/W6NZfCO5SIk",
+      "quiz": [
+        {
+          "question": "What is JavaScript primarily used for?",
+          "options": [
+            "Styling web pages",
+            "Structuring web content",
+            "Adding interactivity to web pages",
+            "Connecting to databases"
+          ],
+          "answer": "Adding interactivity to web pages",
+          "explanation": "JavaScript is used to make web pages interactive."
+        },
+        {
+          "question": "Which of the following is a correct way to declare a variable in JavaScript?",
+          "options": [
+            "var x = 5;",
+            "int x = 5;",
+            "x := 5;",
+            "let x == 5;"
+          ],
+          "answer": "var x = 5;",
+          "explanation": "'var', 'let', or 'const' are used to declare variables in JavaScript."
+        },
+        {
+          "question": "Which symbol is used for single-line comments in JavaScript?",
+          "options": [
+            "//",
+            "/*",
+            "<!--",
+            "#"
+          ],
+          "answer": "//",
+          "explanation": "// is used for single-line comments in JavaScript."
+        },
+        {
+          "question": "Which HTML tag can include JavaScript code?",
+          "options": [
+            "<js>",
+            "<script>",
+            "<code>",
+            "<javascript>"
+          ],
+          "answer": "<script>",
+          "explanation": "JavaScript is placed inside <script> tags in HTML."
+        },
+        {
+          "question": "Which of the following is NOT a JavaScript data type?",
+          "options": [
+            "String",
+            "Boolean",
+            "Float",
+            "Number"
+          ],
+          "answer": "Float",
+          "explanation": "JavaScript uses 'Number' for all numeric values; there's no separate 'Float' type."
+        }
+      ]
+    }
+  ],
+  "Level1": [
+    {
+      "id": "js-lv1-1",
+      "title": "Variables & Data Types",
+      "videoUrl": "https://www.youtube.com/embed/Bv_5Zv5c-Ts",
+      "quiz": [
+        {
+          "question": "Which keyword creates a block-scoped variable?",
+          "options": [
+            "var",
+            "let",
+            "define",
+            "scope"
+          ],
+          "answer": "let",
+          "explanation": "'let' creates a block-scoped variable."
+        },
+        {
+          "question": "What will `typeof null` return in JavaScript?",
+          "options": [
+            "'null'",
+            "'object'",
+            "'undefined'",
+            "'boolean'"
+          ],
+          "answer": "'object'",
+          "explanation": "In JavaScript, typeof null returns 'object' due to a legacy bug."
+        },
+        {
+          "question": "Which data type represents true or false values?",
+          "options": [
+            "Number",
+            "Boolean",
+            "String",
+            "Undefined"
+          ],
+          "answer": "Boolean",
+          "explanation": "Boolean represents true or false values."
+        },
+        {
+          "question": "How can you convert a string to a number in JavaScript?",
+          "options": [
+            "Number('5')",
+            "parseInt('5')",
+            "parseFloat('5')",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "All listed methods can convert a string to a number."
+        },
+        {
+          "question": "Which of these is a constant declaration?",
+          "options": [
+            "var PI = 3.14;",
+            "let PI = 3.14;",
+            "const PI = 3.14;",
+            "define PI = 3.14;"
+          ],
+          "answer": "const PI = 3.14;",
+          "explanation": "'const' is used to declare constants in JavaScript."
+        }
+      ]
+    }
+  ],
+  "Level2": [
+    {
+      "id": "js-lv2-1",
+      "title": "Functions & Events",
+      "videoUrl": "https://www.youtube.com/embed/PoRJizFvM7s",
+      "quiz": [
+        {
+          "question": "Which keyword is used to define a function?",
+          "options": [
+            "def",
+            "function",
+            "fun",
+            "method"
+          ],
+          "answer": "function",
+          "explanation": "'function' is the keyword used to define a function in JavaScript."
+        },
+        {
+          "question": "How do you call a function named `greet`?",
+          "options": [
+            "call greet;",
+            "greet();",
+            "greet[];",
+            "call.greet();"
+          ],
+          "answer": "greet();",
+          "explanation": "Functions are invoked using parentheses: greet();"
+        },
+        {
+          "question": "Which event is triggered when a user clicks on an element?",
+          "options": [
+            "onhover",
+            "onchange",
+            "onload",
+            "onclick"
+          ],
+          "answer": "onclick",
+          "explanation": "'onclick' is the event triggered when an element is clicked."
+        },
+        {
+          "question": "Which statement adds a click event to a button with id 'btn'?",
+          "options": [
+            "btn.onClick = myFunc;",
+            "document.getElementById('btn').addEventListener('click', myFunc);",
+            "btn.addEvent('click', myFunc);",
+            "addEvent(btn, 'click', myFunc);"
+          ],
+          "answer": "document.getElementById('btn').addEventListener('click', myFunc);",
+          "explanation": "This is the correct way to attach a click event listener in JavaScript."
+        },
+        {
+          "question": "Which keyword refers to the current object inside a method?",
+          "options": [
+            "this",
+            "self",
+            "that",
+            "object"
+          ],
+          "answer": "this",
+          "explanation": "'this' refers to the current object in JavaScript."
+        }
+      ]
+    }
+  ]
+}
+
+
+
+
+}
+
+
+
+  
