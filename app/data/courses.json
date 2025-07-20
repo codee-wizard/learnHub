@@ -126,68 +126,6 @@
               "explanation": "The <p> tag is used to define paragraphs in HTML."
             }
           ]
-        },
-        {
-          "id": "html-beg-3",
-          "title": "HTML Attributes",
-          "videoUrl": "https://www.youtube.com/embed/wvR40su_XBM",
-          "quiz": [
-            {
-              "question": "What are HTML attributes used for?",
-              "options": [
-                "To add JavaScript to a page",
-                "To define content layout",
-                "To provide additional information about elements",
-                "To style elements"
-              ],
-              "answer": "To provide additional information about elements",
-              "explanation": "HTML attributes provide extra information about elements, like class, id, href, etc."
-            },
-            {
-              "question": "Which attribute is used to specify a unique identifier for an element?",
-              "options": [
-                "class",
-                "name",
-                "id",
-                "ref"
-              ],
-              "answer": "id",
-              "explanation": "The 'id' attribute assigns a unique identifier to an element."
-            },
-            {
-              "question": "Which attribute specifies a CSS class for an element?",
-              "options": [
-                "class",
-                "style",
-                "id",
-                "css"
-              ],
-              "answer": "class",
-              "explanation": "The 'class' attribute assigns one or more class names to an element for styling."
-            },
-            {
-              "question": "Which attribute is used with <a> to specify the destination URL?",
-              "options": [
-                "src",
-                "href",
-                "link",
-                "target"
-              ],
-              "answer": "href",
-              "explanation": "The 'href' attribute specifies the URL the link goes to."
-            },
-            {
-              "question": "What does the 'alt' attribute provide in an <img> tag?",
-              "options": [
-                "Image source path",
-                "Alternative text for the image",
-                "Title of the image",
-                "Image size"
-              ],
-              "answer": "Alternative text for the image",
-              "explanation": "The 'alt' attribute provides alternative text if the image cannot be displayed."
-            }
-          ]
         }
       ],
       "Level2": [{
@@ -249,68 +187,6 @@
             ],
             "answer": "Links text to an input field",
             "explanation": "<label> provides a clickable description for input fields, improving usability."
-          }
-        ]
-      },
-      {
-        "id": "html-adv-3",
-        "title": "HTML Tables",
-        "videoUrl": "https://www.youtube.com/embed/BI1o2H9z9fo",
-        "quiz": [
-          {
-            "question": "Which tag is used to define a table?",
-            "options": [
-              "<tr>",
-              "<td>",
-              "<table>",
-              "<thead>"
-            ],
-            "answer": "<table>",
-            "explanation": "The <table> tag creates a table in HTML."
-          },
-          {
-            "question": "Which tag defines a table header?",
-            "options": [
-              "<td>",
-              "<tr>",
-              "<th>",
-              "<thead>"
-            ],
-            "answer": "<th>",
-            "explanation": "<th> is used to define header cells in a table."
-          },
-          {
-            "question": "What tag is used to group the table’s column headings?",
-            "options": [
-              "<thead>",
-              "<tbody>",
-              "<tfoot>",
-              "<group>"
-            ],
-            "answer": "<thead>",
-            "explanation": "<thead> groups header rows in a table for better structure."
-          },
-          {
-            "question": "Which tag defines the main body of the table?",
-            "options": [
-              "<tbody>",
-              "<tfoot>",
-              "<thead>",
-              "<tr>"
-            ],
-            "answer": "<tbody>",
-            "explanation": "<tbody> contains the main rows of data in a table."
-          },
-          {
-            "question": "Which tag defines each cell in a table row?",
-            "options": [
-              "<tr>",
-              "<td>",
-              "<th>",
-              "<cell>"
-            ],
-            "answer": "<td>",
-            "explanation": "<td> defines a standard cell in a table row."
           }
         ]
       }]
@@ -442,68 +318,6 @@
             "explanation": "To change the page background, set 'background-color' on the <body>."
           }
         ]
-      },
-      {
-        "id": "css-lv1-2",
-        "title": "Box Model & Text Styling",
-        "videoUrl": "https://www.youtube.com/embed/rIO5326FgPE",
-        "quiz": [
-          {
-            "question": "Which CSS property adds space inside an element's border?",
-            "options": [
-              "margin",
-              "padding",
-              "spacing",
-              "gap"
-            ],
-            "answer": "padding",
-            "explanation": "Padding is the space between content and the element’s border."
-          },
-          {
-            "question": "Which property is used to add space outside the border?",
-            "options": [
-              "padding",
-              "gap",
-              "margin",
-              "spacing"
-            ],
-            "answer": "margin",
-            "explanation": "Margin adds space outside the border of an element."
-          },
-          {
-            "question": "What does the 'border' property do?",
-            "options": [
-              "Adds spacing",
-              "Changes background",
-              "Creates a border around the element",
-              "Resizes the element"
-            ],
-            "answer": "Creates a border around the element",
-            "explanation": "The 'border' property adds a border around the element."
-          },
-          {
-            "question": "Which CSS property changes the size of text?",
-            "options": [
-              "text-size",
-              "font-weight",
-              "font-size",
-              "text-style"
-            ],
-            "answer": "font-size",
-            "explanation": "'font-size' is used to set the size of text in CSS."
-          },
-          {
-            "question": "Which property makes text bold?",
-            "options": [
-              "font-bold",
-              "weight",
-              "bold",
-              "font-weight"
-            ],
-            "answer": "font-weight",
-            "explanation": "The 'font-weight' property controls the boldness of text."
-          }
-        ]
       }
     ],
 
@@ -567,68 +381,6 @@
             ],
             "answer": "grid-template-columns",
             "explanation": "'grid-template-columns' defines column structure in grid."
-          }
-        ]
-      },
-      {
-        "id": "css-lv2-2",
-        "title": "Transitions & Responsive Design",
-        "videoUrl": "https://www.youtube.com/embed/GUEB9FogoP8",
-        "quiz": [
-          {
-            "question": "Which property is used to create smooth animations?",
-            "options": [
-              "transition",
-              "animation",
-              "effect",
-              "motion"
-            ],
-            "answer": "transition",
-            "explanation": "'transition' allows property changes to occur smoothly over a duration."
-          },
-          {
-            "question": "Which unit is relative to the root font size?",
-            "options": [
-              "px",
-              "em",
-              "rem",
-              "%"
-            ],
-            "answer": "rem",
-            "explanation": "'rem' is relative to the root element's font size."
-          },
-          {
-            "question": "What is the purpose of media queries?",
-            "options": [
-              "To style print pages",
-              "To link different CSS files",
-              "To apply styles based on screen size",
-              "To debug CSS code"
-            ],
-            "answer": "To apply styles based on screen size",
-            "explanation": "Media queries make your design responsive to different devices."
-          },
-          {
-            "question": "Which keyword starts a media query?",
-            "options": [
-              "@media",
-              "@responsive",
-              "@screen",
-              "@query"
-            ],
-            "answer": "@media",
-            "explanation": "Media queries begin with '@media'."
-          },
-          {
-            "question": "Which property changes layout direction in flexbox?",
-            "options": [
-              "flex-align",
-              "flex-direction",
-              "direction",
-              "justify-items"
-            ],
-            "answer": "flex-direction",
-            "explanation": "'flex-direction' defines the direction of the main axis in flexbox."
           }
         ]
       }

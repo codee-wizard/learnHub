@@ -130,7 +130,7 @@ export default function BlogPage()
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-90"
           style={{
-            backgroundImage: 'url("/img/blog-bg.jpeg")'
+            backgroundImage: 'url("https://i.pinimg.com/736x/e1/ee/bf/e1eebf1a28bbd61faffd38626ba11533.jpg")'
           }}
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
