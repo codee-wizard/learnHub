@@ -1,92 +1,101 @@
 'use client'
 
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import courseData from '../data/courses.json'
 
 export default function QuizPage() {
   const searchParams = useSearchParams()
-  const [quizQuestions, setQuizQuestions] = useState([])
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
-  const [selectedOption, setSelectedOption] = useState(null)
-  const [showResult, setShowResult] = useState(false)
-  const [score, setScore] = useState(0)
+  const router = useRouter()
+
+  const course = searchParams.get('course')
+  const level = searchParams.get('level')
+  const lessonId = searchParams.get('lesson')
+
+  const [quizData, setQuizData] = useState([])
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [userAnswers, setUserAnswers] = useState([])
 
   useEffect(() => {
-    const course = searchParams.get('course')
-    const level = searchParams.get('level')
-    const lessonId = searchParams.get('lesson')
-
-    if (course && level && lessonId) {
-      const lessons = courseData[course]?.[level] || []
+    if (course && level && lessonId && courseData[course]) {
+      const lessons = courseData[course][level]
       const lesson = lessons.find((l) => l.id === lessonId)
-
-      if (lesson && lesson.quiz) {
-        setQuizQuestions(lesson.quiz)
+      if (lesson) {
+        setQuizData(lesson.quiz || [])
       }
     }
-  }, [searchParams])
+  }, [course, level, lessonId])
 
-  const currentQuestion = quizQuestions[currentQuestionIndex]
-
-  const handleOptionClick = (option) => {
-    setSelectedOption(option)
-    const correct = option === currentQuestion.answer
-    if (correct) setScore(score + 1)
-
-    setTimeout(() => {
-      setSelectedOption(null)
-      if (currentQuestionIndex < quizQuestions.length - 1) {
-        setCurrentQuestionIndex(currentQuestionIndex + 1)
-      } else {
-        setShowResult(true)
-      }
-    }, 1000)
+  const handleAnswer = (selectedOption) => {
+    const updatedAnswers = [...userAnswers]
+    updatedAnswers[currentIndex] = {
+      question: quizData[currentIndex].question,
+      selected: selectedOption,
+      correct: quizData[currentIndex].answer,
+      explanation: quizData[currentIndex].explanation
+    }
+    setUserAnswers(updatedAnswers)
   }
 
-  if (!quizQuestions.length) {
-    return (
-      <div className="min-h-screen flex items-center justify-center text-white bg-black">
-        ❌ Quiz not found or invalid query params.
-      </div>
-    )
+  const handleNext = () => {
+    if (currentIndex < quizData.length - 1) {
+      setCurrentIndex(currentIndex + 1)
+    } else {
+      // Finished quiz, go to results
+      router.push(`/quiz-results?data=${encodeURIComponent(JSON.stringify(userAnswers))}`)
+    }
   }
 
-  if (showResult) {
-    return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white text-center px-4">
-        <h1 className="text-4xl font-bold mb-4 text-green-400">Quiz Complete!</h1>
-        <p className="text-xl">You scored {score} out of {quizQuestions.length}</p>
-      </div>
-    )
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1)
+    }
   }
+
+  if (quizData.length === 0) {
+    return <div className="p-10 text-white">❌ No quiz found.</div>
+  }
+
+  const currentQ = quizData[currentIndex]
+  const selected = userAnswers[currentIndex]?.selected
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white py-16 px-4 md:px-10">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold mb-6 text-purple-400">{currentQuestion.question}</h2>
-        <ul className="space-y-4">
-          {currentQuestion.options.map((option, idx) => (
-            <li
-              key={idx}
-              onClick={() => handleOptionClick(option)}
-              className={`
-                p-4 rounded-lg cursor-pointer border transition 
-                ${
-                  selectedOption
-                    ? option === currentQuestion.answer
-                      ? 'bg-green-600 border-green-400'
-                      : option === selectedOption
-                      ? 'bg-red-600 border-red-400'
-                      : 'bg-gray-800 border-gray-700'
-                    : 'bg-gray-800 border-gray-700 hover:bg-gray-700'
-                }
-              `}
+    <div className="min-h-screen bg-black text-white px-4 py-10 flex flex-col items-center">
+      <div className="max-w-2xl w-full">
+        <h2 className="text-2xl font-bold mb-6">Question {currentIndex + 1} of {quizData.length}</h2>
+        <p className="text-lg mb-6">{currentQ.question}</p>
+
+        <div className="space-y-3">
+          {currentQ.options.map((option, i) => (
+            <button
+              key={i}
+              className={`w-full px-4 py-2 rounded border text-left ${
+                selected === option
+                  ? 'bg-blue-700 border-blue-400'
+                  : 'bg-gray-800 border-gray-600 hover:bg-gray-700'
+              }`}
+              onClick={() => handleAnswer(option)}
             >
               {option}
-            </li>
+            </button>
           ))}
-        </ul>
+        </div>
+
+        <div className="flex justify-between mt-10">
+          <button
+            onClick={handlePrev}
+            disabled={currentIndex === 0}
+            className="bg-gray-600 px-4 py-2 rounded disabled:opacity-40"
+          >
+            ⬅️ Previous
+          </button>
+          <button
+            onClick={handleNext}
+            className="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700"
+          >
+            {currentIndex === quizData.length - 1 ? 'Submit' : 'Next ➡️'}
+          </button>
+        </div>
       </div>
     </div>
   )

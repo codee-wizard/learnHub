@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { GraduationCap, Mail, Lock, Eye, EyeOff, User } from 'lucide-react';
 import { auth } from "../firebase/page";
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/Navbar";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
