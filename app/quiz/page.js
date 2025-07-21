@@ -41,7 +41,6 @@ export default function QuizPage() {
     if (currentIndex < quizData.length - 1) {
       setCurrentIndex(currentIndex + 1)
     } else {
-      // Finished quiz, go to results
       router.push(`/quiz-results?data=${encodeURIComponent(JSON.stringify(userAnswers))}`)
     }
   }
@@ -60,21 +59,24 @@ export default function QuizPage() {
   const selected = userAnswers[currentIndex]?.selected
 
   return (
-    <div className="min-h-screen bg-black text-white px-4 py-10 flex flex-col items-center">
-      <div className="max-w-2xl w-full">
-        <h2 className="text-2xl font-bold mb-6">Question {currentIndex + 1} of {quizData.length}</h2>
-        <p className="text-lg mb-6">{currentQ.question}</p>
+    <div className="min-h-screen bg-gradient-to-b from-black via-[#0f0c29] to-black text-white flex items-center justify-center px-4">
+      <div className="w-full max-w-2xl p-8 rounded-2xl bg-black/40 backdrop-blur-md border border-white/10 shadow-[0_0_40px_rgba(173,216,230,0.1)]">
+        <h2 className="text-3xl font-semibold mb-6 text-cyan-300 tracking-tight">
+          Question {currentIndex + 1} of {quizData.length}
+        </h2>
+        <p className="text-lg mb-6 text-white/90">{currentQ.question}</p>
 
-        <div className="space-y-3">
+        <div className="space-y-4">
           {currentQ.options.map((option, i) => (
             <button
               key={i}
-              className={`w-full px-4 py-2 rounded border text-left ${
-                selected === option
-                  ? 'bg-blue-700 border-blue-400'
-                  : 'bg-gray-800 border-gray-600 hover:bg-gray-700'
-              }`}
               onClick={() => handleAnswer(option)}
+              className={`w-full text-left px-5 py-3 rounded-lg border transition duration-300
+                ${
+                  selected === option
+                    ? 'bg-cyan-700/20 border-cyan-500 text-cyan-200'
+                    : 'bg-white/5 border-white/10 hover:bg-violet-500/10 hover:border-violet-300'
+                }`}
             >
               {option}
             </button>
@@ -85,15 +87,15 @@ export default function QuizPage() {
           <button
             onClick={handlePrev}
             disabled={currentIndex === 0}
-            className="bg-gray-600 px-4 py-2 rounded disabled:opacity-40"
+            className="px-5 py-2 rounded-lg text-sm text-white bg-white/10 border border-white/20 disabled:opacity-40 hover:bg-white/20 transition"
           >
             ⬅️ Previous
           </button>
           <button
             onClick={handleNext}
-            className="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700"
+            className="px-6 py-2 rounded-lg text-sm font-medium text-white bg-gradient-to-r from-cyan-500 to-violet-500 hover:scale-105 transition-transform"
           >
-            {currentIndex === quizData.length - 1 ? 'Submit' : 'Next ➡️'}
+            {currentIndex === quizData.length - 1 ? 'Submit 🚀' : 'Next ➡️'}
           </button>
         </div>
       </div>

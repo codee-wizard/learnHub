@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { GraduationCap, Mail, Lock, Eye, EyeOff } from 'lucide-react';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/page"
-import Navbar from '../../components/Navbar';
+import Navbar from '../components/Navbar';
 
 export default function Login() {
   const [email, setEmail] = useState('');

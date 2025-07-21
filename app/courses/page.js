@@ -5,8 +5,8 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import { Star ,ChevronDown} from "lucide-react";
 import Image from "next/image";
-import Footer from '../../components/Footer'
-import courseData from '../../data/courses.json'
+import Footer from '../components/Footer'
+import courseData from '../data/courses.json'
 
 const Courseslist = [
     {

@@ -2,8 +2,8 @@
 
 import { Heart, Star, Eye, Target, Users , Award} from "lucide-react";
 import React from 'react';
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function AboutPage() {
 

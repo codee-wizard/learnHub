@@ -63,7 +63,7 @@ export default function LessonsPage() {
                   <div className="mt-4">
                     <Link
                       href={`/quiz?course=${encodeURIComponent(selectedSubject)}&level=${encodeURIComponent(levelName)}&lesson=${lesson.id}`}
-                      className="mt-2 block w-full max-w-[1000px] mx-auto text-center bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                      className="mt-2 block w-full max-w-[1000px] mx-auto text-center px-4 py-2 rounded bg-gradient-to-r from-purple-600 to-cyan-400 hover:bg-violet-600"
                     >
                       Take Quiz
                     </Link>
