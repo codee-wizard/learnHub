@@ -1,12 +1,12 @@
 "use client";
 
-import React from "react";
-import courses from "../data/courses.json"; 
+import React, { useState } from "react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
-import { Star } from "lucide-react";
+import { Star ,ChevronDown} from "lucide-react";
 import Image from "next/image";
-
+import Footer from '../components/Footer'
+import courseData from '../data/courses.json'
 
 const Courseslist = [
     {
@@ -76,9 +76,44 @@ const Courseslist = [
     },
   ];
   
+  const faqs = [
+    {
+      question: "How do the interactive lessons work?",
+      answer: "Our interactive lessons combine video content, hands-on exercises, code editors, and real-time feedback. You'll practice what you learn immediately, making the experience engaging and effective."
+    },
+    {
+      question: "What happens if I don't pass a quiz?",
+      answer: "Don't worry! You can retake quizzes as many times as needed. Each quiz provides detailed explanations for all answers, helping you learn from mistakes and improve your understanding."
+    },
+    {
+      question: "Can I access courses on mobile devices?",
+      answer: "Yes! Our platform is fully responsive and works seamlessly on all devices - desktop, tablet, and mobile. You can learn anywhere, anytime."
+    },
+    {
+      question: "Do I get a certificate upon completion?",
+      answer: "Absolutely! Upon completing a course and passing all quizzes with a minimum score of 70%, you'll receive a verified certificate that you can share on LinkedIn and add to your resume."
+    },
+    {
+      question: "Is there a money-back guarantee?",
+      answer: "Yes, we offer a 30-day money-back guarantee. If you're not satisfied with your course experience, you can request a full refund within 30 days of enrollment."
+    },
+    {
+      question: "How long do I have access to course materials?",
+      answer: "Once you enroll in a course, you have lifetime access to all materials, including future updates. You can learn at your own pace and revisit content whenever needed."
+    }
+  ];
 
   
 export default function CourseslistCourseslistPage() {
+
+    const [openIndex, setOpenIndex] = useState(null);
+
+const toggle = (index) => {
+
+      setOpenIndex(openIndex === index ? null : index);
+    };
+
+    
   return (
     <div className="min-h-screen bg-black text-white">
       <Navbar />
@@ -109,26 +144,28 @@ export default function CourseslistCourseslistPage() {
 
         <div className="min-h-screen bg-black text-white py-10 px-4 md:px-10">
       <h1 style={{ fontFamily: 'var(--font-cormorant)' }} className="text-4xl font-bold mb-8">Available Courseslist - </h1>
-      <div className="overflow-x-auto hide-scrollbar py-4">
-  <div className="flex gap-9 min-w-max">
+      <div className="overflow-x-auto hide-scrollbar py-4 px-6">
+  <div className="flex gap-9 min-w-max ">
     {Courseslist.map((course) => (
       <div
         key={course.id}
-        className="min-w-[300px] max-w-[300px] bg-[#1c1f26] rounded-xl overflow-hidden shadow-md hover:shadow-lg transition"
+        className="bg-gradient-to-br from-violet-600/10 to-indigo-600/10 border border-indigo-500/30 
+           rounded-xl shadow-[0_0_20px_#818cf8] p-8 transition-all 
+           hover:shadow-[0_0_30px_#a5b4fc] min-w-[400px] max-w-[400px]"
       >
-        <div className="relative h-44 w-full">
+        <div className="relative h-60 w-full ">
           <Image
             src={course.image}
             alt={course.subject}
             width={400}
             height={180}
-            className="rounded-t-xl object-cover w-full h-44"
+            className="rounded-t-xl object-cover w-full h-55"
           />
         </div>
         <div className="p-4 space-y-2">
-          <div className="text-sm text-green-400 font-semibold">{course.level}</div>
+          <div className="text-sm text-cyan-400 font-semibold">{course.level}</div>
           <div className="text-xl font-semibold">{course.subject}</div>
-          <div className="text-green-400 font-bold">{course.price}</div>
+          <div className="text-violet-400 font-bold">{course.price}</div>
           <div className="text-gray-400 text-sm flex justify-between">
             <span>{course.students} students</span>
             <span>{course.duration}</span>
@@ -141,16 +178,59 @@ export default function CourseslistCourseslistPage() {
               <li key={idx}>{feat}</li>
             ))}
           </ul>
-          <button className="w-full mt-3 bg-green-400 text-black font-semibold py-2 rounded hover:bg-green-500 transition">
-            Enroll Now
-          </button>
+
+        <Link
+  href={`/lessons?subject=${courseData.subject}`}
+  className="mt-4 w-full inline-block text-center text-black font-semibold py-2 rounded bg-gradient-to-r from-purple-600 to-cyan-400 hover:bg-violet-600 transition"
+>
+  Enroll Now
+</Link>
         </div>
       </div>
     ))}
   </div>
 </div>
+<section className="py-20 bg-black text-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 style={{ fontFamily: 'var(--font-cormorant)' }} className="text-4xl md:text-4xl font-bold mb-4">Got Questions? We've Got Answers.</h2>
+          <p className="text-lg text-gray-400">
+            Here’s everything you might be wondering about before getting started.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="bg-gray-800 border border-gray-700 rounded-lg px-6 py-4"
+            >
+              <button
+                onClick={() => toggle(index)}
+                className="w-full flex items-center justify-between text-left text-lg font-medium hover:text-violet-400 transition"
+              >
+                {faq.question}
+                <ChevronDown
+                  size={20}
+                  className={`ml-2 transform transition-transform ${
+                    openIndex === index ? 'rotate-180' : ''
+                  }`}
+                />
+              </button>
+              {openIndex === index && (
+                <div className="mt-3 text-gray-300 leading-relaxed text-base">
+                  {faq.answer}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
     </div>
+    <Footer/>
     </div>
+
   );
 }

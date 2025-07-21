@@ -65,7 +65,7 @@ export default function AboutPage() {
   
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className=" min-h-screen bg-black text-white">
 <Navbar/>
     
       {/* first-sec */}
@@ -201,7 +201,7 @@ export default function AboutPage() {
     </div>
   </div>
 </section>
-{/* Values Section */}
+{/* values section */}
 <section className="py-20 bg-black">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-12">
@@ -229,6 +229,8 @@ export default function AboutPage() {
     </div>
   </div>
 </section>
+
+
 {/* Team Section */}
 <section className="py-20 bg-black text-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
