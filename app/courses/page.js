@@ -36,6 +36,32 @@ const Courseslist = [
       image: "/img/css.png",
     },
     {
+        id: 5,
+        subject: "Scratch Programming",
+        level: "Beginner",
+        price: "$89",
+        rating: 4.5,
+        duration: "3 weeks",
+        students: 640,
+        instructor: "Emily Rodriguez",
+        features: ["Drag-n-drop", "Game dev", "Storytelling"],
+        category: "Kids",
+        image: "/img/scratch.png",
+      },
+      {
+        id: 4,
+        subject: "Python for Beginners",
+        level: "Beginner",
+        price: "$119",
+        rating: 4.6,
+        duration: "5 weeks",
+        students: 875,
+        instructor: "Michael Chen",
+        features: ["Real projects", "Libraries", "Certification"],
+        category: "Data Science",
+        image: "/img/python.jpg",
+      },
+    {
       id: 3,
       subject: "JavaScript Essentials",
       level: "Intermediate",
@@ -48,32 +74,8 @@ const Courseslist = [
       category: "Programming",
       image: "/img/js.png",
     },
-    {
-      id: 4,
-      subject: "Python for Beginners",
-      level: "Beginner",
-      price: "$119",
-      rating: 4.6,
-      duration: "5 weeks",
-      students: 875,
-      instructor: "Michael Chen",
-      features: ["Real projects", "Libraries", "Certification"],
-      category: "Data Science",
-      image: "/img/python.jpg",
-    },
-    {
-      id: 5,
-      subject: "Scratch Programming",
-      level: "Beginner",
-      price: "$89",
-      rating: 4.5,
-      duration: "3 weeks",
-      students: 640,
-      instructor: "Emily Rodriguez",
-      features: ["Drag-n-drop", "Game dev", "Storytelling"],
-      category: "Kids",
-      image: "/img/scratch.png",
-    },
+   
+   
   ];
   
   const faqs = [
@@ -105,6 +107,9 @@ const Courseslist = [
 
   
 export default function CourseslistCourseslistPage() {
+
+
+    const subjects = Object.keys(courseData)
 
     const [openIndex, setOpenIndex] = useState(null);
 
@@ -178,13 +183,17 @@ const toggle = (index) => {
               <li key={idx}>{feat}</li>
             ))}
           </ul>
+          <div className="text-center mt-4">
+      <Link
+        href={`/lessons?subject=${encodeURIComponent(course.subject)}`}
+        className="inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded"
+      >
+        Enroll in {course.subject}
+      </Link>
+    </div>
+         
 
-        <Link
-  href={`/lessons?subject=${courseData.subject}`}
-  className="mt-4 w-full inline-block text-center text-black font-semibold py-2 rounded bg-gradient-to-r from-purple-600 to-cyan-400 hover:bg-violet-600 transition"
->
-  Enroll Now
-</Link>
+      
         </div>
       </div>
     ))}
