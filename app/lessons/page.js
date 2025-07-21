@@ -50,9 +50,12 @@ export default function LessonsPage() {
                     ></iframe>
                   </div>
                   <Link
-                    href={`/quizzes/${lesson.id}`}
-                    className="inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded"
-                  >
+  href={`/lessons/${courseData.slug}`} 
+  className="mt-3 block bg-green-600 hover:bg-green-700 text-white
+             text-center py-2 rounded transition"
+>
+  Enroll Now
+</Link>
                     Take Quiz
                   </Link>
                 </div>

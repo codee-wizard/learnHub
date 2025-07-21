@@ -3,6 +3,7 @@
       "Beginner": [
         {
           "id": "html-beg-1",
+          "slug": "html", 
           "title": "What is HTML?",
           "videoUrl": "https://www.youtube.com/embed/qz0aGYrrlhU",
           "quiz": [
@@ -67,6 +68,7 @@
       "Level1": [
         {
           "id": "html-beg-2",
+          "slug": "html",
           "title": "Basic HTML Tags",
           "videoUrl": "https://www.youtube.com/embed/UB1O30fR-EE",
           "quiz": [
@@ -130,6 +132,7 @@
       ],
       "Level2": [{
         "id": "html-adv-2",
+        "slug": "html",
         "title": "HTML Forms",
         "videoUrl": "https://www.youtube.com/embed/fqF9M92jzUo",
         "quiz": [
@@ -195,6 +198,7 @@
     "CSS": {
     "Beginner": [{
         "id": "css-beg-1",
+        "slug": "css",
         "title": "Introduction to CSS",
         "videoUrl": "https://www.youtube.com/embed/yfoY53QXEnI",
         "quiz": [
@@ -259,6 +263,7 @@
     "Level1": [
       {
         "id": "css-lv1-1",
+        "slug": "css",
         "title": "Selectors and Colors",
         "videoUrl": "https://www.youtube.com/embed/1PnVor36_40",
         "quiz": [
@@ -324,6 +329,7 @@
     "Level2": [
       {
         "id": "css-lv2-1",
+        "slug": "css",
         "title": "Flexbox & Grid Layout",
         "videoUrl": "https://www.youtube.com/embed/fYq5PXgSsbE",
         "quiz": [
@@ -390,6 +396,7 @@
   "Beginner": [
     {
       "id": "scratch-beg-1",
+      "slug": "scratch",
       "title": "Introduction to Scratch",
       "videoUrl": "https://www.youtube.com/embed/VIpmkeqJhmQ",
       "quiz": [
@@ -454,6 +461,7 @@
   "Level1": [
     {
       "id": "scratch-lv1-1",
+      "slug": "scratch",
       "title": "Motion and Events",
       "videoUrl": "https://www.youtube.com/embed/Xn2zVg20NLI",
       "quiz": [
@@ -518,6 +526,7 @@
   "Level2": [
     {
       "id": "scratch-lv2-1",
+      "slug": "scratch",
       "title": "Control, Loops & Broadcasts",
       "videoUrl": "https://www.youtube.com/embed/h7mGdc9GDLY",
       "quiz": [
@@ -585,6 +594,7 @@
   "Beginner": [
     {
       "id": "python-beg-1",
+      "slug": "python",
       "title": "Introduction to Python",
       "videoUrl": "https://www.youtube.com/embed/_uQrJ0TkZlc",
       "quiz": [
@@ -649,6 +659,7 @@
   "Level1": [
     {
       "id": "python-lv1-1",
+      "slug": "python",
       "title": "Variables and Data Types",
       "videoUrl": "https://www.youtube.com/embed/CqvZ3vGoGs0",
       "quiz": [
@@ -713,6 +724,7 @@
   "Level2": [
     {
       "id": "python-lv2-1",
+      "slug": "python",
       "title": "Conditional Statements and Loops",
       "videoUrl": "https://www.youtube.com/embed/KzqSDvzOFNA",
       "quiz": [
@@ -780,6 +792,7 @@
   "Beginner": [
     {
       "id": "js-beg-1",
+      "slug": "js",
       "title": "Introduction to JavaScript",
       "videoUrl": "https://www.youtube.com/embed/W6NZfCO5SIk",
       "quiz": [
@@ -844,6 +857,7 @@
   "Level1": [
     {
       "id": "js-lv1-1",
+      "slug": "js",
       "title": "Variables & Data Types",
       "videoUrl": "https://www.youtube.com/embed/Bv_5Zv5c-Ts",
       "quiz": [
@@ -908,6 +922,7 @@
   "Level2": [
     {
       "id": "js-lv2-1",
+      "slug": "js",
       "title": "Functions & Events",
       "videoUrl": "https://www.youtube.com/embed/PoRJizFvM7s",
       "quiz": [
