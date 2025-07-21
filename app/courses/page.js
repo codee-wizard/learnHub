@@ -186,7 +186,7 @@ const toggle = (index) => {
           <div className="text-center mt-4">
       <Link
         href={`/lessons?subject=${encodeURIComponent(course.subject)}`}
-        className="inline-block bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded"
+        className="inline-block bg-gradient-to-r from-purple-600 to-cyan-400 hover:bg-violet-600 text-white px-4 py-2 rounded"
       >
         Enroll in {course.subject}
       </Link>
