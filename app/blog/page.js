@@ -253,50 +253,63 @@ export default function BlogPage()
 {/* blog-post */}
 
 <section className="py-12">
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div className="flex items-center justify-between mb-8">
-<h2 style={{ fontFamily: 'var(--font-cormorant)' }} className="text-4xl font-bold">Latest Articles</h2>
-<p className="text-gray-400">{filteredPosts.length} articles found</p>
-</div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    </div>{filteredPosts.slice(1).map(post => (
-    <div
-    key={post.id}
-    className="rounded-xl border border-[#5e17eb] bg-gradient-to-br from-[#1a1a2e] via-[#0f0f1f] to-[#1a1a2e] hover:shadow-[0_0_30px_#8a2be2] shadow-[0_0_15px_#8a2be2] transition-all duration-300 group overflow-hidden"
-  >
-    <div className="relative">
-      <img
-        src={post.image}
-        alt={post.title}
-        className="w-full h-48 object-cover rounded-t-lg"
-      />           
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-between mb-8">
+      <h2 style={{ fontFamily: 'var(--font-cormorant)' }} className="text-4xl font-bold">
+        Latest Articles
+      </h2>
+      <p className="text-gray-400">{filteredPosts.length} articles found</p>
     </div>
-    <div className="absolute top-4 left-4">
-    <span className="bg-black/70 text-white">
-      {post.category}
-    </span></div>
 
-  
+    {/* 🟡 FIX: Keep map *inside* grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {filteredPosts.slice(1).map(post => (
+        <div
+          key={post.id}
+          className="rounded-xl border border-[#5e17eb] bg-gradient-to-br from-[#1a1a2e] via-[#0f0f1f] to-[#1a1a2e] hover:shadow-[0_0_30px_#8a2be2] shadow-[0_0_15px_#8a2be2] transition-all duration-300 group overflow-hidden"
+        >
+          <div className="relative">
+            <img
+              src={post.image}
+              alt={post.title}
+              className="w-full h-48 object-cover rounded-t-lg"
+            />
+            <div className="absolute top-4 left-4">
+              <span className="bg-black/70 text-white text-xs px-2 py-1 rounded">
+                {post.category}
+              </span>
+            </div>
+          </div>
 
+          <div className="p-4 space-y-3">
+            <h3 className="text-lg font-bold text-white group-hover:text-violet-400 transition">
+              {post.title}
+            </h3>
 
+            <p className="text-sm text-gray-400 leading-relaxed">
+              {post.excerpt}
+            </p>
 
-   
-    <button className="inline-flex items-center bg-[#8a2be2] hover:bg-violet-600 text-white text-sm font-semibold px-4 py-2 rounded-md transition">
-      Read More
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="ml-2 h-4 w-4"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-      </svg>
-    </button>
-    </div>))}
-</div>
+            <button className="inline-flex items-center bg-[#8a2be2] hover:bg-violet-600 text-white text-sm font-semibold px-4 py-2 rounded-md transition">
+              Read More
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="ml-2 h-4 w-4"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
 </section>
+
 
 {/* newsletter-signup */}
 <section className="py-20 bg-gradient-to-r from-purple-500/10 to-cyan-500/10">
